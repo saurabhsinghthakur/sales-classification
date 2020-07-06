@@ -12,14 +12,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
 	
-	features = [float(x) for x in request.form.values()]
-	final_feature 	= [np.array(features)]
-	prediction 		= model.predict(final_feature)
-	if prediction[0] == 1:
-		output = "Purchase"
-	else:
-		output = "Not Purchase"
-	return render_template('index.html', output={"output":output,"params":features})
+	
+	return 1#render_template('index.html', output={"output":output,"params":features})
 
 #Main driver function
 if __name__ == '__main__':
